@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" crossorigin="anonymous"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      rel="stylesheet">
+    <title>Juego Juego</title>
+  </head>
+
+  <body>
+    <h1 id="tituloWeb">CURSO DE DOM.</h1>
+    <div>
+      <h2>Prueba DOM</h2>
+      <label for="input-color">Seleccione un Color</label>
+      <input type="color" title="Seleccione un Color" id="input-color" />
+      <button id="boton" onclick="pintar()">Insertar</button>
+    </div>
+    <div class="container mt-5">
+      <p id="textoHexa" class="lead text-center">#563d7c</p>
+      <div
+        id="cardColor"
+        class="card text-center p-5"
+        style="background-color: #563d7c","width: 500px", height: 500px"
+      ></div>
+    </div>
+
+    <div class="container mt-5">
+        <h2>REGISTRO</h2>
+        <label for="input-color">INGRESE DATOS</label>
+        <input type="text" title="Seleccione un Color" id="user" />
+        <input type="password" title="Contrasena" id="password">
+        <input type="email" title="Ingrese Correo" id="correo">
+        <button id="registro">Login</button>
+      </div>
+      <div class="container mt-5">
+        <p id="state" class="lead text-center">LOGIN</p>
+      </div>
+
+      <div class="container mt-5">
+        <h2>Create element</h2>
+        <ul id="lista">
+            <li>Elemento Estatico</li>
+        </ul>
+        <button id='crear'>Crear Elemento</button>
+        <button id='agregar'>Agregar Elemento</button>
+      </div>
+    <script src="Dom1.js"></script>
+  </body>
+</html>
