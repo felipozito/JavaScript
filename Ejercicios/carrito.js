@@ -1,14 +1,18 @@
 const carrito = document.querySelector("#carrito");
 const template = document.querySelector("#template");
 const fragment = document.createDocumentFragment();
-const agregar = document.querySelectorAll(".card button");
+const boton = document.querySelectorAll(".card-body button");
+let carritoObjeto = {};
 
-const carritoObjeto = {};
+funciones();
 
-const agregarCarrito = (e) => {
-  // console.log(e.target.dataset);
-  // console.log(e.target.dataset.fruta);
+function funciones() {
+  boton.forEach((boton) => boton.addEventListener("click", addCarrito));
+}
 
+function addCarrito(e) {
+  e.preventDefault();
+  console.log(e.target);
   const producto = {
     titulo: e.target.dataset.fruta,
     id: e.target.dataset.fruta,
@@ -18,13 +22,10 @@ const agregarCarrito = (e) => {
   if (carritoObjeto.hasOwnProperty(producto.id)) {
     producto.cantidad = carritoObjeto[producto.id].cantidad + 1;
   }
-
   carritoObjeto[producto.id] = producto;
-
+  console.log(carritoObjeto);
   pintarCarrito();
-};
-
-agregar.forEach((boton) => boton.addEventListener("click", agregarCarrito));
+}
 
 const pintarCarrito = () => {
   carrito.textContent = "";
@@ -37,10 +38,3 @@ const pintarCarrito = () => {
   });
   carrito.appendChild(fragment);
 };
-if {
-          {
-                    {
-                              
-                    }
-          }
-}
