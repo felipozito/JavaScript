@@ -16,9 +16,9 @@ const txtColor = document.getElementById("textoHexa");
 const area = document.getElementById("cardColor");
 
 function pintar() {
-  console.log(color.value);
-  txtColor.textContent = color.value;
-  cardColor.style.backgroundColor = color.value;
+      console.log(color.value);
+      txtColor.textContent = color.value;
+      cardColor.style.backgroundColor = color.value;
 }
 
 ////////////////////////////////////////////////////////
@@ -29,21 +29,19 @@ const btnRegistrar = document.getElementById("registro");
 const stateUser = document.getElementById("state");
 
 const usuario = {
-  user: "",
-  password: "",
-  correo: "",
-  estado: false,
+      user: "",
+      password: "",
+      correo: "",
+      estado: false,
 };
 
 btnRegistrar.addEventListener("click", () => {
-  usuario.user = username.value;
-  usuario.password = passwordUser.value;
-  usuario.correo = correoUser.value;
-  usuario.estado = true;
-  console.log(usuario);
-  usuario.estado
-    ? (stateUser.textContent = "OK THANKS")
-    : (stateUser.textContent = "Login");
+      usuario.user = username.value;
+      usuario.password = passwordUser.value;
+      usuario.correo = correoUser.value;
+      usuario.estado = true;
+      console.log(usuario);
+      usuario.estado ? (stateUser.textContent = "OK THANKS") : (stateUser.textContent = "Login");
 });
 
 /////////////////////////////////////////////////
@@ -56,16 +54,16 @@ const fragment = new DocumentFragment();
 const arrayPaises = ["Peru", "Ecuador", "Bolivia"];
 
 btnCrear.addEventListener("click", () => {
-  const li = document.createElement("li"); // Creo Elemento
-  li.textContent = "Elemento Creado"; // Defino Elemento
-  lista.appendChild(li); // Agrego
+      const li = document.createElement("li"); // Creo Elemento
+      li.textContent = "Elemento Creado"; // Defino Elemento
+      lista.appendChild(li); // Agrego
 });
 
 btnAgregar.addEventListener("click", () => {
-  arrayPaises.forEach((pais) => {
-    li = document.createElement("li"); // Creo Elemento
-    li.textContent = pais; // Defino Elemento
-    fragment.appendChild(li); // Agrego
-  });
-  lista.appendChild(fragment);
+      arrayPaises.forEach((pais) => {
+            li = document.createElement("li"); // Creo Elemento
+            li.textContent = pais; // Defino Elemento
+            fragment.appendChild(li); // Agrego
+      });
+      lista.appendChild(fragment);
 });
